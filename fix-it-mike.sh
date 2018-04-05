@@ -228,9 +228,9 @@ else
     show_ok
 fi
 
-echo -ne "Packaging into /tmp/$name.tar.gz"
+echo -ne "Packaging into /tmp/new.tar.gz"
 cd /tmp
-tar zcvf $name.tar.gz $output/* > /dev/null 2>&1
+tar zcvf new.tar.gz $output/* > /dev/null 2>&1
 if [ $? != 0 ]; then
     show_fail
 else
@@ -244,7 +244,7 @@ echo "We have created a file here: ${GREEN}${BOLD}/tmp/$name${NORMAL}.tar.gz"
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     echo "You need to move it to your computer and send it to mike"
     echo "For example, you can try to execute \`scp\` command on your host:"
-    echo -e "\t${BOLD}scp <USER>@<HOST>:/tmp/$name.tar.gz ~${NORMAL}"
+    echo -e "\t${BOLD}scp <USER>@<HOST>:/tmp/new.tar.gz ~${NORMAL}"
     echo "Replace <USER> with username on this computer"
     echo "Replace <HOST> with IP address of this computer"
     echo "If you did everything right you will see a file named"
