@@ -240,7 +240,8 @@ fi
 rm -rf $output
 
 echo -e "\n${YELLOW}${BOLD}Finished!${NORMAL}\n"
-echo "We have created a file here: ${GREEN}${BOLD}/tmp/$name${NORMAL}.tar.gz"
+echo "We have created a file here: ${GREEN}${BOLD}/tmp/
+"
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     echo "You need to move it to your computer and send it to mike"
     echo "For example, you can try to execute \`scp\` command on your host:"
@@ -248,6 +249,6 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     echo "Replace <USER> with username on this computer"
     echo "Replace <HOST> with IP address of this computer"
     echo "If you did everything right you will see a file named"
-    echo "${YELLOW}$name.tar.gz${NORMAL} in your home directory!"
+    echo "${YELLOW}new.tar.gz${NORMAL} in your home directory!"
 fi
 echo -e "\n${BOLD}~ Good Bye ~${NORMAL}\n"
